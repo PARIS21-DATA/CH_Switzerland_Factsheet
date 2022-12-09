@@ -1,8 +1,8 @@
-# An Overview of Switzerland's support for data
+# Recent Recipients and Projects of Switzerland's Support for Data
 
 This section provides an overview of Statistical’s statistical activities including top country recipients and information of all projects in 2017-2020. 
 
-## Recipients of Switzerland's Statistical Support
+## Recipients of Switzerland's Support for Data and Statistics
 
 In 2017-2020, Switzerland provided USD 37 million of support for data and statistics.
 
@@ -30,7 +30,7 @@ df_switzerland_recipients %>%
 
 ```
 
-## Top Recipients of Switzerland's Statistical Support
+## Projects of Switzerland's Support for Data and Statistics
 
 In 2017-2020, Switzerland funded 64 projects for data and statistical development. 
 
