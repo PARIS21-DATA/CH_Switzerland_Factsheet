@@ -13,7 +13,7 @@ In 2017-2020, Switzerland provided around USD 9 million per year to data and sta
 
 During the same period, UK, Canada, South Korea and Sweden spent USD 53 million, USD 26 million, USD 22 million and USD 22 million, respectively.
 
-```{r genseries, echo = FALSE, message = F, fig.cap = 'Average annual funding for data and statistics (2017-2020)', out.width = '50%', fig.align = 'center'}
+```{r genseries, echo = FALSE, message = F, fig.cap = 'Average annual funding for data and statistics (2017-2020)', out.width = '60%', fig.align = 'center'}
 
 source("code/00. boot.R")
 
@@ -26,7 +26,7 @@ USD 9 million accounts for 0.25% of Switzerland’s annual Official Development 
 UK, Canada, South Korea and Sweden also allocated a higher share of their ODA to data and statistics than Switzerland did. 
 
 
-```{r share, echo = FALSE, message = F, fig.cap = 'Share of total ODA for data and statistics (2017-2020)', out.width = '50%', fig.align = 'center'}
+```{r share, echo = FALSE, message = F, fig.cap = 'Share of total ODA for data and statistics (2017-2020)', out.width = '75%', fig.align = 'center'}
 
 knitr::include_graphics("images/Share of total ODA for data and statistics.png")
 

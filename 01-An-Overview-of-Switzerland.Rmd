@@ -1,6 +1,40 @@
 # Recent Recipients and Projects of Switzerland's Support for Data
 
-This section provides an overview of Statistical’s statistical activities including top country recipients and information of all projects in 2017-2020. 
+This section provides an overview of Switzerland’s statistical activities, including top country recipients, other active donors to coordinate with and potential aid orphans in 2017-2020. 
+
+## Projects of Switzerland's Support for Data and Statistics
+
+In 2017-2020, Switzerland funded 64 projects for data and statistical development. 
+
+``` {r other-donors, echo = FALSE, message = F}
+
+df_switzerland_projects <- readRDS("~/dropbox/PARIS21/R/PRESS/Data/Intermediate/80.3 Switzerland projects.RDS")
+
+df_switzerland_projects %>% 
+  mutate(disbursement = round(disbursement, 3), 
+         projecttitle = stringr::str_replace(projecttitle, "([[:alpha:]])", toupper)) %>% 
+  select(`Project name` = projecttitle, 
+         Recipient = recipientname, 
+         `Disbursements (USD million)` = disbursement, 
+         `Sector` = sectorname, 
+         `CRS ID` = crsid
+         # `IDA recipient` = ida, 
+         # `Fragile states` = fs 
+         )%>% 
+  kbl(escape = F
+      , caption = "List of projects by Switzerland in 2017-2020") %>% 
+  kable_paper("hover"
+              , full_width = F
+              # , font = "Cambria"
+  )%>% 
+  kable_styling(fixed_thead = T) %>%
+  scroll_box(width = "100%", box_css = "border: 0px;"
+             , height = "600px") 
+
+
+
+```
+
 
 ## Recipients of Switzerland's Support for Data and Statistics
 
@@ -22,39 +56,11 @@ df_switzerland_recipients %>%
          # `Fragile states` = fs 
   )%>% 
   kbl(escape = F
-      , caption = "Recipients of Switzerland (2017-2020)") %>% 
+      , caption = "Recipients of Switzerland's support for data and statistics in 2017-2020") %>% 
   kable_paper("hover"
               , full_width = F
               # , font = "Cambria"
-  )
-
+  ) %>% 
+  kable_styling(fixed_thead = T) 
 ```
 
-## Projects of Switzerland's Support for Data and Statistics
-
-In 2017-2020, Switzerland funded 64 projects for data and statistical development. 
-
-``` {r other-donors, echo = FALSE, message = F}
-
-df_switzerland_projects <- readRDS("~/dropbox/PARIS21/R/PRESS/Data/Intermediate/80.3 Switzerland projects.RDS")
-
-df_switzerland_projects %>% 
-  mutate(disbursement = round(disbursement, 3)) %>% 
-  select(Recipient = recipientname, 
-         `Disbursements (USD million)` = disbursement, 
-         `Project name` = projecttitle, 
-         `Sector` = sectorname, 
-         `CRS ID` = crsid
-         # `IDA recipient` = ida, 
-         # `Fragile states` = fs 
-         )%>% 
-  kbl(escape = F
-      , caption = "List of projects") %>% 
-  kable_paper("hover"
-              , full_width = F
-              # , font = "Cambria"
-  )
-
-
-
-```
